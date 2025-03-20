@@ -1,0 +1,1061 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "hobo std";
+}
+
+/* Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+
+/* Custom Vertical Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: black; /* Background for scrollbar track */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ffcc00, #ff8800, #ff2200);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ff8800;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ff8800, #ff2200);
+    box-shadow: 0 0 15px #ff2200;
+}
+
+/* Left Side Scrollbar Position */
+body {
+    overflow-y: scroll; /* Enables scrolling */
+    direction: rtl; /* Moves scrollbar to the left */
+}
+
+* {
+    direction: ltr; /* Ensures content remains left-to-right */
+}
+
+/* Navbar Styling */
+.navbar {
+    width: 100%;
+    height: 60px; /* Ensure navbar height is fixed */
+    background: linear-gradient(90deg, #ff0000, #ff8800, #ffcc00);
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(255, 102, 0, 0.5);
+}
+
+/* Logo */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+    position: relative;
+}
+
+/* Navbar Links */
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: black;
+    color: yellow;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(255, 217, 0, 0.952);
+    z-index: 1000;
+    min-width: 200px;
+}
+
+/* Glow Effect on Dropdown */
+.dropdown-menu a {
+    color: white;
+    padding: 8px 15px;
+    display: block;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.dropdown-menu a:hover {
+    background: #ffcc00;
+    color: black;
+    box-shadow: 0 0 10px #ff8800;
+}
+
+/* Show Dropdown on Click */
+.show {
+    display: block !important;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    color: black;
+}
+
+/* Banner Styling */
+.banner {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 60px; /* Navbar ke height jitna space de taaki overlap na ho */
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Make sure it fully covers */
+    display: block;
+    border-bottom: 5px  solid #ff2200;
+}
+
+/* Banner Text */
+.banner-content {
+    position: absolute;
+    top: 20%; /* Heading ko upar move kar diya */
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    width: 50%; /* Width kam kardi taake text break hojaye */
+    text-align: center;
+    text-shadow: 0 0 10px #ff8800, 0 0 20px #ff8800, 0 0 30px rgb(68, 18, 2);
+
+}
+
+/* Heading Styling */
+.animated-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    opacity: 0;
+    animation: waveFade 4s ease-in-out infinite;
+    line-height: 1.2;
+}
+
+/* Phrase Styling */
+.animated-phrase {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 10px;
+    color: #ffcc00;
+    animation: waveFade 4s ease-in-out infinite;
+}
+
+/* Keyframe Animation */
+@keyframes waveFade {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    25% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Light floating effect */
+    }
+    75% {
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .banner-content {
+        width: 70%;
+        top: 15%;
+    }
+
+    .animated-heading {
+        font-size: 1.8rem;
+    }
+
+    .animated-phrase {
+        font-size: 1rem;
+    }
+}
+
+/* About Us */
+
+/* About Us Section */
+.about-section {
+    margin: 0;
+    width: 100%;
+    padding: 80px 5%;
+    background: linear-gradient(180deg, #ffcc00, black, black, #ff8800,
+    black, black, #ffcc00);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image Styling */
+.about-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid orange;
+    box-shadow: 0 0 20px orange;
+    object-fit: cover;
+    margin-left: 30px;
+}
+
+/* 🔥 Container Border Animation 🔥 */
+.about-container {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    gap: 40px;
+    padding: 50px;
+    border-radius: 15px;
+    border: 5px solid red;
+    box-shadow: 0 0 20px rgb(255, 0, 0);
+    padding-right: 75px;
+    animation: borderGlow 2s infinite alternate; /* Border animation */
+}
+
+/* 🔥 Image Border Animation 🔥 */
+.about-image img {
+    width: 400px;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 5px solid red;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    transition: transform 0.3s ease-in-out;
+    animation: borderGlow 2s infinite alternate; /* Image border animation */
+}
+
+/* 🔥 Hover Effect for Image 🔥 */
+.about-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 136, 0, 0.9);
+}
+
+/* 🔥 Animated Border Glow 🔥 */
+@keyframes borderGlow {
+    0% {
+        border-color: red;
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+    }
+    50% {
+        border-color: yellow;
+        box-shadow: 0 0 20px rgba(255, 255, 0, 0.8);
+    }
+    100% {
+        border-color: red;
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+    }
+}
+
+/* 🔥 Heading Glow Effect 🔥 */
+.about-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff8800;
+    animation: textGlow 2s infinite alternate;
+}
+
+/* 🔥 Animated Text Glow 🔥 */
+@keyframes textGlow {
+    0% { text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff8800; }
+    50% { text-shadow: 0 0 15px #ff8800, 0 0 30px #ffcc00; }
+    100% { text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff8800; }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 100%;
+    }
+}
+
+/* Outer Side */
+/* Showcase Section */
+.Showcase-section {
+    width: 100%;
+    padding: 80px 20px;
+    background: linear-gradient(180deg, #ffcc00, black, black, #ff8800,
+    black, black, #ffcc00);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Inner Side*/
+/* Showcase Container */
+.Showcase-container {
+    background-color: black;
+    display: flex;
+    flex-direction: column; /* Yeh line text aur images ko ek column mein layegi */
+    align-items: center; /* Yeh title aur text ko center karegi */
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 5px;
+    padding: 50px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgb(255, 0, 0);
+    border: 5px solid;
+    animation: borderAnimation 2s infinite linear; /* Animation apply ki */
+}
+
+/* 🔥 Border Animation 🔥 */
+@keyframes borderAnimation {
+    0% {
+        border-color: red;
+        box-shadow: 0 0 20px red;
+    }
+    50% {
+        border-color: orange;
+        box-shadow: 0 0 25px orange;
+    }
+    100% {
+        border-color: red;
+        box-shadow: 0 0 20px red;
+    }
+}
+
+.Showcase-title {
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: white;
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff8800;
+}
+
+.Showcase-text {
+    display: block;
+    text-align: center; /* Yeh line text ko center karegi */
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 1.6;
+    color: #ffcc00;
+    max-width: 80%; /* Text ko thoda limited width dene ke liye */
+}
+
+.first {
+    margin: 30px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 400px;
+    height: 400px;
+}
+
+.second {
+    margin: 30px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 400px;
+    height: 400px;
+}
+
+.third {
+    margin: 30px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 400px;
+    height: 400px;
+}
+
+.forth {
+    margin: 30px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 400px;
+    height: 400px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .Showcase-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 column on mobile */
+    }
+}
+
+/* Banner Section */
+.first-banner {
+    margin: 30px;
+    margin-right: 470px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 600px;
+    height: 240px;
+    margin-left: 203px;
+}
+
+.second-banner {
+    margin: 30px;
+    margin-left: 470px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 600px;
+    height: 240px;
+    margin-right: 209px;
+}
+
+.third-banner {
+    margin: 30px;
+    margin-right: 470px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 600px;
+    height: 240px;
+    margin-left: 203px;
+}
+
+.forth-banner {
+    margin: 30px;
+    margin-left: 470px;
+    object-fit: fill;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 600px;
+    height: 240px;
+    margin-right: 209px;
+}
+
+/* Model Section */
+.first-Model {
+    margin: 30px;
+    margin-right: 470px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 600px;
+    height: 350px;
+    margin-left: 203px;
+}
+
+.second-Model {
+    margin: 30px;
+    margin-left: 470px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 500px;
+    height: 390px;
+    margin-right: 105px;
+}
+
+.third-Model {
+    margin: 30px;
+    margin-right: 470px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 600px;
+    height: 350px;
+    margin-left: 203px;
+}
+
+.forth-Model {
+    margin: 30px;
+    margin-left: 470px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 500px;
+    height: 390px;
+    margin-right: 105px;
+}
+
+
+/* Same PFP-Banner Section */
+.upper-theme{
+    display: flex;
+}
+
+.first-P {
+    margin: 32px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 258px;
+    height: 258px;
+}
+
+.first-B {
+    margin: 32px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 542px;
+    height: 258px;
+}
+
+.second-P {
+    margin: 32px;
+    object-fit: fill;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 258px;
+    height: 258px;
+}
+
+.second-B {
+    margin: 32px;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 542px;
+    height: 258px;
+    object-fit: cover;
+}
+
+.third-P {
+    margin: 32px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 258px;
+    height: 258px;
+}
+
+.third-B {
+    margin: 32px;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 542px;
+    height: 258px;
+}
+
+.forth-P {
+    margin: 32px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 258px;
+    height: 258px;
+}
+
+.forth-B {
+    margin: 32px;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 542px;
+    height: 258px;
+}
+
+/* BOOK COVER */
+.first-book {
+    margin: 30px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 600px;
+    height: 450px;
+    margin-left: 300px;
+}
+
+.second-book {
+    margin: 30px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 600px;
+    height: 450px;
+    margin-right: 300px;
+}
+
+/* CARDS */
+.first-card {
+    margin: 30px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 350px;
+    height: 450px;
+}
+
+.second-card {
+    margin: 30px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 350px;
+    height: 450px;
+}
+
+.third-card {
+    margin: 30px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 350px;
+    height: 450px;
+}
+
+.forth-card {
+    margin: 30px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 350px;
+    height: 450px;
+}
+
+/* ANIMATED PFP/BANNER */
+.first-video {
+    margin: 32px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 258px;
+    height: 258px;
+}
+
+.first-video-b  {
+    margin: 32px;
+    object-fit: fill;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 542px;
+    height: 258px;
+}
+
+.second-video {
+    margin: 32px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 258px;
+    height: 258px;
+}
+
+.second-video-b {
+    margin: 32px;
+    object-fit: fill;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 542px;
+    height: 258px;
+}
+
+/* VTUBER */
+.first-video-v {
+    margin: 32px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 390px;
+    height: 300px;
+}
+
+.second-video-v {
+    margin: 32px;
+    border-radius: 20px;
+    object-fit: fill;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    width: 390px;
+    height: 300px;
+}
+
+.third-video-v {
+    margin: 32px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 390px;
+    height: 300px;
+}
+
+.forth-video-v {
+    margin: 32px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 390px;
+    height: 300px;
+}
+
+/* Wallpaper Section */
+.first-wall {
+    margin: 30px;
+    margin-right: 470px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 600px;
+    height: 400px;
+    margin-left: 200px;
+}
+
+.second-wall {
+    margin: 30px;
+    margin-left: 470px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 650px;
+    height: 390px;
+    margin-right: 246px;
+}
+
+.third-wall {
+    margin: 30px;
+    margin-right: 470px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 600px;
+    height: 400px;
+    margin-left: 203px;
+}
+
+.forth-wall {
+    margin: 30px;
+    margin-left: 470px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 600px;
+    height: 390px;
+    margin-right: 201px;
+}
+
+/* OVERLAY */
+.first-video-v-O {
+    margin: 32px;
+    object-fit: fill;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 400px;
+    height: 300px;
+}
+
+.second-video-v-O {
+    margin: 32px;
+    object-fit: fill;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 400px;
+    height: 300px;
+}
+
+.third-video-v-O {
+    margin: 32px;
+    object-fit: fill;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 400px;
+    height: 300px;
+}
+
+.forth-video-v-O {
+    margin: 32px;
+    object-fit: fill;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 400px;
+    height: 300px;
+}
+
+/* Footer Styling */
+.footer {
+    width: 100%;
+    background: black;
+    color: #ffcc00;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff8800;
+    box-shadow: 0 -5px 15px rgba(255, 0, 0, 0.8);
+    position: relative;
+    bottom: 0;
+}
+
+.Emote-sheet {
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+}
+
+.first-panel {
+    margin: 30px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 400px;
+    height: 140px; 
+}
+
+.second-panel {
+    margin: 30px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 400px;
+    height: 140px; 
+}
+
+.third-panel {
+    margin: 30px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 400px;
+    height: 140px; 
+}
+
+.forth-panel {
+    margin: 30px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 400px;
+    height: 140px; 
+}
+
+.first-pack {
+    margin: 30px;
+    object-fit: cover;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 550px;
+    height: 400px;
+    margin-right: 345px;
+}
+
+.second-pack {
+    margin: 30px;
+    object-fit: fill;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 550px;
+    height: 400px;
+    margin-left: 345px;
+}
+
+.third-pack {
+    margin: 30px;
+    object-fit: fill;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 550px;
+    height: 400px;
+    margin-right: 345px;
+}
+
+.forth-pack {
+    margin: 30px;
+    object-fit: fill;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 550px;
+    height: 400px;
+    margin-left: 345px;
+}
+
+.first-pixel {
+    margin: 30px;
+    object-fit: contain;
+     border-radius: 20px;
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.8);
+    animation: borderGlow 2s infinite alternate;
+    width: 400px;
+    height: 400px;
+}
+
+/* 🔥 Keyframes for Border Animation 🔥 */
+@keyframes borderGlow {
+    0% {
+        border-color: red;
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+    }
+    50% {
+        border-color: #ffcc00;
+        box-shadow: 0 0 20px rgba(255, 217, 0, 0.8);
+    }
+    100% {
+        border-color: red;
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+    }
+}
